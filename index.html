@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<title>Web Template</title>
+<head>
+<style>
+:root{
+	--text-white:#fff;
+	--text-red:#f64b3c;
+	--bg-light:#f6eedf;
+	--bg-red:#f64b3c;
+	--bg-dark:#222222;
+	--bg-white:#fff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Calistoga&family=Montserrat:wght@700&family=Nunito&family=Poppins:wght@600&display=swap');
+
+/*
+font-family: 'Archivo', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Calistoga', cursive;
+*/
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+
+}
+html,body{
+	position:absolute;
+	min-width:100%;
+}
+
+.container-fluid{
+	width:100%;
+	height:auto;
+}
+.section{
+	width:100%;
+	height:797px;
+}
+.container{
+	width:1246px;
+	height:auto;
+}
+.header{
+	background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 20%), url("images/header-base.jpg") no-repeat top center;
+	background-size:cover;
+}
+.navbar{
+	height:233px;
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+
+.header nav a{
+	font-family: 'Poppins', sans-serif;
+	font-size:25px;
+	font-weight:600;
+	color:var(--text-white);
+	text-decoration:none;
+	margin:0 0 0 73px;
+	text-transform:uppercase;
+	transition:all 0.5s;
+}
+.header nav a:hover, .header nav a.active{
+	color:var(--text-red);
+}
+.headerContent h1{
+	font-family: 'Archivo', sans-serif;
+	font-size:90px;
+	color:var(--text-white);
+}
+.headerContent p{
+	font-family: 'Nunito', sans-serif;
+	font-size:32px;
+	color:var(--text-white);
+	margin:25px 0;
+}
+.headerContent button{
+	font-family: 'Montserrat', sans-serif;
+	font-size:25px;
+	color:var(--text-white);
+	background:var(--bg-red);
+	text-transform:uppercase;
+	font-weight:700;
+	padding:24px 75px;
+	border:none;
+	border-radius:40px;
+	transition:all 0.5s;
+	cursor:pointer;
+}
+.headerContent button:hover{
+	color:var(--text-red);
+	background:var(--bg-white);
+}
+.our-chef{
+	background:url("images/our-chef.png") no-repeat center, var(--bg-light);
+	text-align:center;
+	padding:92px 0 0 0;
+}
+.our-chef p:first-child{
+	font-family: 'Archivo', sans-serif;
+	font-size:64px;
+	color:var(--text-red);
+	font-weight:bold;
+	margin:0;
+}
+.our-chef p{
+	font-family: 'Montserrat', sans-serif;
+	font-size:1.5rem;
+	color:var(--text-red);
+	margin:50px 0;
+}
+.founder{
+	display:flex;
+}
+.flex-grow-1{
+	flex-grow:1;
+
+}
+.flex-grow-2{
+	flex-grow:2;
+}
+.founder img{
+	border-radius:50%;
+}
+.founder p{
+	margin:0;
+}
+p.founders{
+	font-family: 'Archivo', sans-serif;
+	font-weight:bold;
+	font-size:2rem;
+	margin:0;
+}
+.best-burger{
+	background:var(--bg-red);
+}
+.best-burger h2{
+	color:var(--text-white);
+	margin:0 120px;
+}
+.best-burger img{
+	margin:160px auto;
+	display:block;
+	border-radius:50%;
+}
+.best-burgerContent{
+	display:flex;
+	align-items:center;
+	color:var(--text-white);
+}
+.best-burgerContent p{
+	font-family: 'Nunito', sans-serif;
+	font-size:30px;
+	margin:0 0 28px 120px;
+}
+.best-burgerContent button{
+	background:var(--bg-white);	
+	color:var(--text-red);
+	font-size:25px;
+	font-family: 'Montserrat', sans-serif;
+	border-radius:40px;
+	padding:24px 75px;
+	font-weight:700;
+	text-transform:uppercase;
+	border:none;
+	cursor:pointer;
+	margin:0 120px;
+	transition:all 0.5s;
+}
+.best-burgerContent button:hover{
+	background:var(--bg-dark);	
+	color:var(--text-white);
+}
+.big-burger{
+	background:url("images/big-burger-background.png") no-repeat;
+}
+.big-burger img{
+	margin:160px auto;
+	display:block;
+	border-radius:50%;
+}
+.big-burgerContent{
+	display:flex;
+	align-items:center;
+	color:var(--text-red);
+}
+.big-burgerContent h2{
+	color:var(--text-red);
+	margin:0 80px;
+}
+.big-burgerContent p{
+	font-family: 'Nunito', sans-serif;
+	font-size:30px;
+	margin:0 0 28px 80px;
+}
+.big-burgerContent button{
+	background:var(--bg-red);	
+	color:var(--text-white);
+	font-size:25px;
+	font-family: 'Montserrat', sans-serif;
+	border-radius:40px;
+	padding:24px 75px;
+	font-weight:700;
+	text-transform:uppercase;
+	border:none;
+	cursor:pointer;
+	margin:0 80px;
+	transition:all 0.5s;
+}
+.big-burgerContent button:hover{
+	background:#ffe4b5;	
+	color:var(--text-red);
+}
+.statistics{
+	background:var(--bg-red);
+	color:var(--text-white);
+	
+}
+.statisticsContent p:first-child{
+	text-align:center;
+	font-family: 'Archivo', sans-serif;
+	font-weight:bold;
+	padding-top:60px;
+	font-size:62px;
+	margin:0 0 40px 0;
+}
+.statisticsContent p{
+	font-size:25px;
+	text-align:center;
+	margin:0 0 80px 0;
+	font-family: 'Montserrat', sans-serif;
+}
+.stats{
+	display:flex;
+	height:300px;
+	text-align:center;
+	margin:0 auto 180px 5px;
+}
+.stats .flex-grow-1{
+	/*margin:0 0 0 104px;*/
+	border:5px solid #fff;
+	border-radius:50%;
+	width:300px;
+}
+.stats1{
+	font-size:25px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+	padding:0 0 92px 0;
+	text-transform:uppercase;
+}
+.popular{
+	background:url("images/popular-background.png") no-repeat, var(--bg-light);		
+}
+.popular .h2{
+	color:var(--text-red);
+	text-align:center;
+	font-family: 'Archivo', sans-serif;
+	margin:0 auto 120px auto;
+	padding:96px 0 0 0;
+}
+.package{
+	color:var(--text-red);
+	display:flex;
+
+}
+.package .flex-grow-1{
+	border:1px solid #000;
+	background:#fff;
+	text-align:center;	
+	margin:0 70px 80px 60px;
+	padding:34px 0;
+	height:400px;
+	font-family: 'Archivo', sans-serif;
+}
+.package .flex-grow-1 p:first-child{
+	text-transform:uppercase;
+}
+.package p:last-child{
+	font-size:20px;
+	font-family: 'Montserrat', sans-serif;
+}
+.package button{
+	background:var(--bg-red);	
+	color:var(--text-white);
+	font-size:23px;
+	font-family: 'Montserrat', sans-serif;
+	border-radius:40px;
+	padding:12px 40px;;
+	font-weight:700;
+	text-transform:uppercase;
+	border:none;
+	cursor:pointer;
+	margin:24px 20px;
+	transition:all 0.5s;
+}
+.package button:hover{
+	background:#ffe4b5;	
+	color:var(--text-red);
+}
+.package .flex-grow-1 .h3{
+	padding:0 0 10px 0;
+}
+.barry{
+	background:linear-gradient(rgba(46,59,40,0.5) 100%, rgba(46,59,40,0) 100%), url("images/background.jpg");
+}
+.bg{
+	background:linear-gradient(rgba(245,75,59,68%) 100%, rgba(245,75,59,0) 100%);
+	height:100%;
+	width:100%;
+}
+.bg p{
+	font-size:45px;
+	text-align:center;
+}
+.bg p:first-child{
+	font-size:36px;
+	font-weight:bold;
+	font-family: 'Archivo', sans-serif;
+	padding:200px 0 150px 0;
+}
+.update{
+	background:url("images/section-seventh-background.png") no-repeat, var(--bg-light);	
+}
+.update p{
+	color:var(--text-red);
+	text-align:center;
+}
+.update .h2{
+	font-family: 'Archivo', sans-serif;
+	padding:230px 0 45px 0;
+}
+.update .h4{
+	font-family: 'Nunito', sans-serif;
+	font-weight:400px;
+	font-size:30px;
+}
+.update input{
+	float:left;
+}
+.update .form{
+	width:549px;
+	height:63px;
+	border-top-left-radius:50rem;
+	border-bottom-left-radius:50rem;
+	border:none;
+	outline:none;
+	color:#835e3f;
+	padding-left:40px; 
+	margin:90px 0 0 250px;
+}
+.update input:placeholder{
+	color:#835e3f;
+}
+.update button{
+	height:63px;
+	border-top-right-radius:50rem;
+	border-bottom-right-radius:50rem;	
+	font-size:25px;
+	font-family: 'Nunito', sans-serif;
+	text-transform:uppercase;
+	color:#fff;
+	border:none;
+	outline:none;
+	background:var(--bg-red);
+	padding:0 41px;
+	cursor:pointer;
+	transition:all 0.5s;
+	margin:90px 0 0 0;
+}
+.footer{
+	background:var(--bg-dark);
+
+}
+.footer .title{
+	display:flex; 
+	flex-grow:1;
+}
+.footer .details{
+	
+}
+.h1{
+	font-size:102px;
+	font-weight:bold;
+	font-family: 'Archivo', sans-serif;
+	padding:66px 0 0 0;
+}
+.h2{
+	font-size:75px;
+	font-weight:bold;
+}	
+.h3{
+	font-size:33px;
+	font-weight:bold;
+}
+
+.m-auto{
+	margin:auto;
+}
+</style>
+<body>
+<div class="container-fluid">
+	<div class="section header">
+		<div class="container m-auto navbar">
+			<a href="#"><img src="images/logo.png" alt=""></a>
+			<nav>
+				<a href="#" class="active">Home</a>
+				<a href="#">Product</a>
+				<a href="#">Promo</a>
+				<a href="#">About</a>
+				<a href="#">Contact</a>
+			</nav>
+		</div>
+		<div class="container m-auto headerContent">
+			<h1>Get Cashback<br>up to 50%</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Suspendisse consectetur<br>justo eu nunc consequat.</p>
+			<button>order now</button>
+		</div>
+	</div>
+	<div class="section our-chef">
+		<div class="container m-auto">
+			<p>Our Chef</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vi-<br>vamus lacinia odio vitae vestibulum vestibulum.</p>
+		</div>
+		<div class="container m-auto founder">
+			<div class="flex-grow-1">
+				<img src="images/founder.jpg" alt="">
+				<p class="founders">Aiden Hunter</p>
+				<p>Founder</p>
+			</div>
+			<div class="flex-grow-1">
+				<img src="images/co-founder1.jpg" alt="">
+				<p class="founders">Ethel Ramsey</p>
+				<p>Co-Founder</p>
+			</div>
+			<div class="flex-grow-1">
+				<img src="images/co-founder2.jpg" alt="">
+				<p class="founders">Fannie Stewart</p>
+				<p>Co-Founder</p>
+			</div>
+		</div>
+	</div>
+	<div class="section best-burger">
+		<div class="container m-auto best-burgerContent">
+			<div class="flex-grow-1">
+				<img src="images/burger.jpg" alt="">
+			</div>
+			<div class="flex-grow-1">
+				<h2 class="h2">Best Burger</h2><br><br>
+				 <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Vivamus lacinia odio vitae<br>vestibulum vestibulum.</p><br><br>
+				<button>order now</button>
+			</div>
+		</div>
+	</div>
+	<div class="section big-burger">
+		<div class="container m-auto big-burgerContent">
+			<div class="flex-grow-1">
+				<h2 class="h2">Big Burger</h2><br><br>
+				<p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Vivamus lacinia odio vitae<br>vestibulum vestibulum.</p><br><br>
+				<button>order now</button>
+			</div>
+			<div class="flex-grow-1">
+				<img src="images/big-burger.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="section statistics ">
+		<div class="container m-auto statisticsContent ">
+			<p>Statistics</p>	
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+		
+		</div>
+		<div class="container  stats">
+			<div class="flex-grow-1">				
+				<p class="h1">7k</p>
+				<p class="stats1">customer</p>
+			</div>
+			<div class="flex-grow-1">			
+				<p class="h1">102</p>
+				<p class="stats1">outlets</p>
+			</div>
+			<div class="flex-grow-1">
+				<p class="h1">35</p>
+				<p class="stats1">country</p>
+			</div>
+	</div>
+	<div class="section popular">
+		<div class="container m-auto">
+			<p class=h2>Popular Package</p>
+		</div>
+		<div class="container m-auto package">
+			<div class="flex-grow-1">
+				<p class="h3">Package i</p>
+				<a href="#"><img src="images/package-icon.png" alt=""></a>	
+				<p class="h3">&dollar;10.00</p>
+				<p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</p>
+				<button>order now</button>			
+			</div>
+			<div class="flex-grow-1">
+				<p class="h3">Package ii</p>
+				<a href="#"><img src="images/package-icon.png" alt=""></a>	
+				<p class="h3">&dollar;20.00</p>
+				<p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</p>
+				<button>order now</button>			
+			</div>
+
+			<div class="flex-grow-1">
+				<p class="h3">Package iii</p>
+				<a href="#"><img src="images/package-icon.png" alt=""></a>	
+				<p class="h3">&dollar;30.00</p>
+				<p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</p>
+				<button>order now</button>			
+			</div>
+		</div>		
+	</div>
+	<div class="section barry">
+		<div class="container m-auto bg">
+			<p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.Vivamus lacinia odio vitae<br>vestibulum vestibulum.</p>
+			<p>Barry Henderson</p>
+		</div>
+	</div>
+	<div class="section update">
+		<div class="container m-auto ">
+			<p class="h2">Don't miss Our Update</p>
+			<p class="h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Vivamus lacinia odio vitaevestibulum vestibulum.</p>
+			<input type="email" name="email" placeholder="Your Email" class="form">
+			<button>subscribe</button>
+		</div>
+	</div>
+	<div class="section footer">
+		<div class="container m-auto title flex-grow-1">
+			<div class="">
+				title here
+			</div>
+			<div class="container m-auto details flex-grow-2">
+				<div class="flex-grow-1">about</div>
+				<div class="flex-grow-1">about</div>
+				<div class="flex-grow-1">about</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</head>
+</html>
